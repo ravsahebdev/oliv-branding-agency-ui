@@ -10,9 +10,6 @@
     body {
         min-height: 100%;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     /* root element  */
@@ -31,7 +28,6 @@
       ⁡⁣⁢⁣Components⁡
     ======================*/
     section,
-    .container,
     article,
     header {
         width: 100%;
@@ -166,6 +162,7 @@
     .container {
         width: 85%;
         min-height: 100vh;
+        margin: 0 auto;
     }
 
     /*======================
@@ -173,6 +170,12 @@
     ======================*/
     nav {
         padding: 30px 0px;
+        position: relative;
+    }
+
+    .ri-menu-line,
+    #list-show {
+        display: none;
     }
 
     .nav-left {
@@ -632,6 +635,9 @@
         font-size: 1.2rem;
         width: 90%;
         line-height: 1.6;
+    }
+
+    .cta-left-card .contact {
         margin-left: 1rem;
     }
 
@@ -793,4 +799,334 @@
     .right-footer a {
         text-decoration: none;
         color: var(--medium-gray);
+    }
+
+    /* Mobile devices up to 500px */
+    @media (max-width: 500px) {
+
+        /* Main container */
+        .container {
+            width: 95% !important;
+        }
+
+        /* single column */
+        section,
+        article,
+        .team-section .team-row,
+        .work-grid,
+        .text-grid {
+            flex-direction: column;
+            grid-template-columns: 1fr !important;
+        }
+
+        /* White button size */
+        .white-lg-btn {
+            padding: 12px 22px;
+        }
+
+        /* Black button size */
+        .black-lg-btn {
+            padding: 15px 26px;
+            font-size: .8rem;
+        }
+
+        /* menu list  */
+        #list-show ul {
+            color: var(--white);
+            height: 50%;
+            font-size: 1.3rem;
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: .6px;
+        }
+
+        /* menu icon */
+        .ri-menu-line {
+            display: block;
+            position: absolute;
+            right: 15px;
+            font-size: 1.3rem;
+            z-index: 999;
+        }
+
+        /* Heading font weight */
+        h1,
+        h2,
+        h3 {
+            font-weight: 500;
+        }
+
+        /* Hide elements */
+        .hide,
+        footer .right-footer,
+        .nav-right,
+        .nav-left span,
+        .experts-card-join button {
+            display: none;
+        }
+
+        /* menu overlay */
+        .show {
+            display: block !important;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(4, 6, 15, 0.79);
+            z-index: 99;
+        }
+
+        /* section heading */
+        .heading-text {
+            font-size: 1.4rem;
+            word-spacing: normal;
+        }
+
+        /* nav spacing */
+        nav {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* Hero section */
+        .hero-section {
+            height: min(50vh, 420px);
+            padding: 0 10px;
+        }
+
+        /* Hero heading size */
+        .hero-section h1 {
+            font-size: 2.5rem;
+        }
+
+        /* sliding cards in row */
+        .sliding-section {
+            flex-direction: row;
+        }
+
+        /* Slide image size */
+        .slide-card img {
+            width: 160px;
+        }
+
+        /* section responsive layout */
+        .about-section {
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            row-gap: 1rem;
+        }
+
+        /* card styling */
+        .about-card {
+            width: 49%;
+            height: 40vh;
+            padding: 1.5rem 1rem;
+            border: 1px solid rgba(136, 136, 136, 0.39);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* card heading */
+        .about-card h2 {
+            font-size: 1.2rem;
+        }
+
+        /* card paragraph */
+        .about-card p {
+            font-size: 1rem;
+        }
+
+        /* Disable hover */
+        .about-card:hover {
+            transform: translateY(0);
+        }
+
+        /* Selected work section width */
+        .selected-work {
+            width: 85%;
+        }
+
+        /* Work section header */
+        .work-header {
+            width: 105%;
+            position: relative;
+            right: 5px;
+        }
+
+        /* Work cards spacing */
+        .work-grid {
+            gap: 3rem;
+        }
+
+        /* Divider width */
+        .divider {
+            width: 90%;
+        }
+
+        /* Brand values grid */
+        .brand-values {
+            width: 100%;
+            column-gap: .5rem;
+            row-gap: 1.5rem;
+            grid-template-columns: 1fr 1fr !important;
+        }
+
+        /* Value card styling */
+        .value-card {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(136, 136, 136, 0.39);
+        }
+
+        /* Value card label */
+        .value-card span {
+            font-size: .8rem;
+        }
+
+        /* Value card headings */
+        .value-card h3,
+        .value-card h2 {
+            font-size: 1.5rem;
+        }
+
+        /* Intro section width and spacing */
+        .intro-section {
+            width: 95%;
+            margin-top: 4rem;
+        }
+
+        /* Intro section heading */
+        .intro-section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* Team and branding section top area */
+        .team-section .team-section-top,
+        .branding-section .branding-top {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        /* Team row spacing */
+        .team-section .team-row {
+            gap: 2.6rem;
+        }
+
+        /* Expert card size */
+        .team-row .experts-card {
+            width: 80%;
+            height: 55vh;
+        }
+
+        /* Join card content positioning */
+        .experts-card-join .team-join {
+            transform: translateX(-20%);
+        }
+
+        /* First expert card custom height */
+        .team-row .experts-card:first-child {
+            height: 46vh;
+        }
+
+        /* Review and CTA section spacing */
+        /* .work-grid, */
+        .review,
+        .cta-section {
+            gap: 5rem;
+        }
+
+        /* Review section layout */
+        .review {
+            width: 100%;
+            gap: 0;
+        }
+
+        /* Review card padding */
+        .review .review-card {
+            padding: 0 15px;
+        }
+
+        /* Review image sizing */
+        .review-img-card img {
+            width: 200px;
+            margin-top: 4rem;
+            padding: 0 5px;
+        }
+
+        /* CTA section layout */
+        .cta-section {
+            height: auto;
+            padding: 1.5rem 1.2rem;
+            width: 96%;
+            gap: 3rem;
+        }
+
+        /* CTA image sizing */
+        .cta-section img {
+            height: 200px;
+            width: 100%;
+        }
+
+        /* Blog section layout */
+        .blog-row {
+            width: 100%;
+            align-items: center;
+            flex-direction: column-reverse;
+            row-gap: 3rem;
+        }
+
+        /* Blog button size */
+        .blog-row button {
+            font-size: .7rem;
+        }
+
+        /* Branding card styling */
+        .branding-card {
+            width: 90%;
+            background-color: var(--cool-gray);
+            padding: 1.2rem;
+            border-radius: 1rem;
+        }
+
+        /* Footer alignment */
+        .container footer {
+            justify-content: center;
+            font-size: .85rem;
+        }
+
+    }
+
+    /* Extra small devices up to 360px */
+    @media (max-width: 360px) {
+
+        /* single column */
+        .about-section,
+        .brand-values {
+            flex-direction: column !important;
+            grid-template-columns: 1fr !important;
+        }
+
+        /* About card sizing */
+        .about-card {
+            width: 80%;
+            height: min(30vh, 250px);
+        }
+
+        /* Value card sizing */
+        .value-card {
+            width: 80% !important;
+            margin: 0 auto;
+        }
+    }
+
+    /* desktop minimum width */
+    @media (min-width: 500px) {
+        body {
+            min-width: 1200px;
+        }
     }
